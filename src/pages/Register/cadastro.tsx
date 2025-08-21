@@ -1,6 +1,7 @@
 import React from "react";
 import "./cadastro.css";
 import Logo from "../../components/Logo/Logo";
+import { Link } from "react-router-dom";
 
 const Cadastro: React.FC = () => {
   return (
@@ -24,7 +25,14 @@ const Cadastro: React.FC = () => {
           id="confirmPassword"
           placeholder="Confirme a Senha:"
         />
+        <button type="submit">Cadastrar</button>
+        <div className="checkbox-container">
+          <input type="checkbox" id="terms" name="terms" />
+          <label htmlFor="terms">Aceito os termos e condições</label>
+        </div>
       </form>
+
+      <Link to="/login">Já possui uma conta? Faça login</Link>
     </div>
   );
 };

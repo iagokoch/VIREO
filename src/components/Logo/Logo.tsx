@@ -1,5 +1,6 @@
 import React from "react";
 import "./Logo.css";
+import { Link } from "react-router-dom";
 
 interface LogoProps {
   width?: string;
@@ -14,12 +15,14 @@ const Logo: React.FC<LogoProps> = ({
 }) => {
   return (
     <div className="logo-container">
-      <img
-        src="/img/VIREO-LOGO.png"
-        alt="VIREO"
-        className={`logo ${className}`}
-        style={{ width }}
-      />
+      <Link to="/">
+        <img
+          src="/img/VIREO-LOGO.png"
+          alt="VIREO"
+          className={`logo ${className}`}
+          style={{ width }}
+        />
+      </Link>
       {text && <span className="logo-text">{text}</span>}
     </div>
   );

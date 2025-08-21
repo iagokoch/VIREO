@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 .container {
@@ -27,8 +27,8 @@ form {
   display: flex;
   flex-direction: column;
   background-color: #2a3814;
-  margin-top: 40px;
-  width: 50%;
+  margin-top: 20px;
+  width: 35%;
   padding: 20px;
   border-radius: 10px;
   align-items: center;
@@ -36,11 +36,104 @@ form {
 
 form input {
   margin-bottom: 12px;
-  margin-top: 20px;
+  margin-top: 7px;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  width: 65%;
+  width: 73%;
+}
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d7c7b5;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #c6b09e;
+}
+
+/* Link para página de login */
+
+a {
+  text-decoration: none;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* Checkbox */
+
+input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.checkbox-container input {
+  margin-right: 8px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  margin-left: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 8px;
+  background-color: #d7c7b5;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+/* marca de check */
+.checkbox-container input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+/* estado marcado */
+.checkbox-container input[type="checkbox"]:checked {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+  border-color: #fff;
+  opacity: 1;
 }
 
 /* WebKit (Chrome, Edge, Safari) - estiliza scrollbar do container e do body */
